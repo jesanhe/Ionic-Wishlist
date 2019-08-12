@@ -6,12 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TerminadosPage } from './terminados.page';
+import { ComponentsModule } from '../components/components.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: TerminadosPage
-  }
+    component: TerminadosPage,
+  },
 ];
 
 @NgModule({
@@ -19,8 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    ComponentsModule,
+    RouterModule.forChild(routes),
   ],
-  declarations: [TerminadosPage]
+  declarations: [TerminadosPage],
 })
 export class TerminadosPageModule {}

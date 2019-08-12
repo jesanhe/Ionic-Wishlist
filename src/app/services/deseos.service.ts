@@ -38,6 +38,15 @@ export class DeseosService {
     this.saveStorage();
   }
 
+  updateList(list: Lista) {
+    this.listas.forEach((lista, index) => {
+      if (lista.id === list.id) {
+        this.listas[index] = list;
+      }
+    });
+    this.saveStorage();
+  }
+
   saveStorage() {
     localStorage.setItem('data', JSON.stringify(this.listas));
   }

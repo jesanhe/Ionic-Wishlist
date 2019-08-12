@@ -5,13 +5,5 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item
-      (click)="listaSeleccionada(lista)"
-      *ngFor="let lista of deseos.listas"
-      detail
-    >
-      {{ lista.titulo }}
-    </ion-item>
-  </ion-list>
+  <app-lists></app-lists>
 </ion-content>

@@ -32,6 +32,7 @@ export class AgregarPage implements OnInit {
         this.deseos.agregarListas(this.lista);
       }
     });
+    console.log('waka');
   }
 
   agregarItem() {
