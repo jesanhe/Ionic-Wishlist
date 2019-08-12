@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Pendientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list #slidingList>
+    <ion-item-sliding *ngFor="let lista of deseos.listas">
+      <ion-item (click)="listaSeleccionada(lista)" detail>
+        {{ lista.titulo }}
+        <ion-note slot="end" color="medium"
+          >{{ lista.items.length }} items</ion-note
+        >
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option (click)="borrarLista(lista)" color="danger">
+          <ion-icon size="large" name="close"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="agregarLista()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
